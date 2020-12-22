@@ -293,6 +293,7 @@
 			baseConfigurationReference = 7108DD9C69A621BE945F3B0B /* Pods-ReactNativeAudioStreaming.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -317,6 +318,7 @@
 			baseConfigurationReference = B78EDA91B740BE8613FB546C /* Pods-ReactNativeAudioStreaming.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
