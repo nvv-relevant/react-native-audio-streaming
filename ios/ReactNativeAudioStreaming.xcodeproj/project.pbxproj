@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		371E75E88603E89B771F475C /* libPods-ReactNativeAudioStreaming.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3DA42824085CFA56B54771 /* libPods-ReactNativeAudioStreaming.a */; };
 		B3E7B58A1CC2AC0600A0062D /* ReactNativeAudioStreaming.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* ReactNativeAudioStreaming.m */; };
+		FBA9AA602592789000A948A1 /* MetaParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9AA5F2592789000A948A1 /* MetaParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 		B3E7B5881CC2AC0600A0062D /* ReactNativeAudioStreaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeAudioStreaming.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* ReactNativeAudioStreaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeAudioStreaming.m; sourceTree = "<group>"; };
 		B78EDA91B740BE8613FB546C /* Pods-ReactNativeAudioStreaming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeAudioStreaming.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactNativeAudioStreaming/Pods-ReactNativeAudioStreaming.release.xcconfig"; sourceTree = "<group>"; };
+		FBA9AA5E2592789000A948A1 /* ReactNativeAudioStreaming-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeAudioStreaming-Bridging-Header.h"; sourceTree = "<group>"; };
+		FBA9AA5F2592789000A948A1 /* MetaParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +75,13 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				FBA9AA5F2592789000A948A1 /* MetaParser.swift */,
 				B3E7B5881CC2AC0600A0062D /* ReactNativeAudioStreaming.h */,
 				B3E7B5891CC2AC0600A0062D /* ReactNativeAudioStreaming.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				2B5F933D7893421053AABADB /* Pods */,
 				0EDFA4144B2AEA3EAF68F078 /* Frameworks */,
+				FBA9AA5E2592789000A948A1 /* ReactNativeAudioStreaming-Bridging-Header.h */,
 			);
 			indentWidth = 3;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E7B58A1CC2AC0600A0062D /* ReactNativeAudioStreaming.m in Sources */,
+				FBA9AA602592789000A948A1 /* MetaParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7108DD9C69A621BE945F3B0B /* Pods-ReactNativeAudioStreaming.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -293,10 +301,14 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(PODS_ROOT)/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = ReactNativeAudioStreaming;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeAudioStreaming-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -304,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B78EDA91B740BE8613FB546C /* Pods-ReactNativeAudioStreaming.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -312,10 +325,13 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 					"$(PODS_ROOT)/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = ReactNativeAudioStreaming;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeAudioStreaming-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
