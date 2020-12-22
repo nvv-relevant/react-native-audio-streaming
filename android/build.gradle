@@ -2,17 +2,14 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        ndk {
-            abiFilters "armeabi-v7a", "x86"
-        }
     }
     lintOptions {
        warning 'InvalidPackage'
@@ -20,7 +17,14 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile files('libs/aacdecoder-android-0.8.jar')
+    implementation 'com.facebook.react:react-native:+'
+
+    api 'com.google.android.exoplayer:exoplayer-core:2.7.0'
+    api 'com.google.android.exoplayer:exoplayer-hls:2.7.0'
+    api 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.google.firebase:firebase-core:17.2.1'
 }
-  
+
+
+apply plugin: 'com.google.gms.google-services'

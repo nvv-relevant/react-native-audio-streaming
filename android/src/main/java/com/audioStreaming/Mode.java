@@ -15,4 +15,6 @@ public class Mode {
     public static String METADATA_UPDATED = "METADATA_UPDATED";
     public static String ALBUM_UPDATED = "ALBUM_UPDATED";
     public static String DESTROYED = "DESTROYED";
+    public static String RETRYING = "RETRYING";
+    public static String ADAPTIVE_TRACK_CHANGED = "TRACK_CHANGED";
 }

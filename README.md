@@ -80,15 +80,7 @@ In XCode, in the project navigator, select your project. Add `libReactNativeAudi
   	```
       compile project(':react-native-audio-streaming')
   	```
-4. If using Proguard then insert the following rules:
-   ```
-   -keep class com.spoledge.aacdecoder.** {
-    *;
-   }
-   ```
-
-   
-   
+  	
 ## Usage
 
 ### Playing sound (similar code used by the player UI)
@@ -126,6 +118,11 @@ class PlayerUI extends Component {
 - [ ] Allow to specify custom styles for the player
 - [ ] Handle artwork of artist
 - [ ] Add tests
+
+## Other RN audio projects
+
+- [jsierles/react-native-audio](https://github.com/jsierles/react-native-audio) to play local audio and record
+- [zmxv/react-native-sound](https://github.com/zmxv/react-native-sound) to play local audio with more controls
 
 ## Credits
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
 import {
     NativeModules,
     StyleSheet,
@@ -33,7 +33,7 @@ class Player extends Component {
         this._onPress = this._onPress.bind(this);
         this.state = {
             status: STOPPED,
-            song: ''
+            song: '',
         };
     }
 
@@ -148,9 +148,5 @@ const styles = StyleSheet.create({
         color: '#000'
     }
 });
-
-Player.propTypes = {
-    url: PropTypes.string.isRequired
-};
 
 export { Player, ReactNativeAudioStreaming }

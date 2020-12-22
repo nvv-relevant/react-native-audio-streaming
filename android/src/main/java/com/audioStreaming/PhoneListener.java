@@ -1,6 +1,5 @@
 package com.audioStreaming;
 
-import android.content.Context;
 import android.content.Intent;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
@@ -23,29 +22,26 @@ public class PhoneListener extends PhoneStateListener {
                 //restart = new Intent(this.module.getReactApplicationContextModule(), this.module.getClassActivity());
                 //restart.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 //this.module.getReactApplicationContextModule().startActivity(restart);
+
+            //    this.module.restartPlayback();
+
                 break;
             case TelephonyManager.CALL_STATE_OFFHOOK:
+                // Device call state: Off-hook. At least one call exists that is dialing, active, or on hold, and no calls are ringing or waiting.
                 //CALL_STATE_OFFHOOK;
                 //restart = new Intent(this.module.getReactApplicationContextModule(), this.module.getClassActivity());
                 //restart.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 //this.module.getReactApplicationContextModule().startActivity(restart);
+
+           //     this.module.stopOncall();
                 break;
             case TelephonyManager.CALL_STATE_RINGING:
-                //CALL_STATE_RINGING
-                if (this.module.getSignal().isPlaying) {
-                    this.module.stopOncall();
-                }
+
+           //     this.module.stopOncall();
                 break;
             default:
                 break;
         }
         super.onCallStateChanged(state, incomingNumber);
-    }
-
-    public void onReceive(Context context, Intent intent) {
-        if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
-            //Headset broadcast
-            //  TODO
-        }
     }
 }

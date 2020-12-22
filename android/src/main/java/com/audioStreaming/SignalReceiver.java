@@ -15,15 +15,28 @@ class SignalReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
+        if(action == null) {
+            return;
+        }
         if (action.equals(Signal.BROADCAST_PLAYBACK_PLAY)) {
             if (!this.signal.isPlaying) {
                 this.signal.play();
+                this.signal.sendFireBaseEvent("click_play");
             } else {
                 this.signal.stop();
+                this.signal.sendFireBaseEvent("click_pause");
             }
-        } else if (action.equals(Signal.BROADCAST_EXIT)) {
-            this.signal.getNotifyManager().cancelAll();
-            this.signal.stop();
+        }  else  if (action.equals(Signal.BROADCAST_PLAYBACK_STOP)) {
+            if (this.signal.isPlaying) {
+                this.signal.stop();
+                this.signal.sendFireBaseEvent("click_pause");
+            }
+        }
+        else if (action.equals(Signal.BROADCAST_EXIT)) {
+            if (this.signal.getNotifyManager() != null) {
+                this.signal.getNotifyManager().cancelAll();
+            }
+            this.signal.stopByBroadcastExit();
             this.signal.exitNotification();
         }
     }
