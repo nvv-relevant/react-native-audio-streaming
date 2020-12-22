@@ -1,3 +1,4 @@
+
 require 'json'
 
 package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
@@ -12,12 +13,14 @@ Pod::Spec.new do |s|
   s.source              = { :git => package['repository']['url'], :tag => "v#{s.version}" }
   s.default_subspec     = 'Main'
   s.requires_arc        = true
+  s.static_framework    = true
+  s.source_files         = 'ios/**/*.{h,m,swift}'
   s.platform            = :ios, "7.0"
   s.preserve_paths      = "**/*.js"
   s.dependency 'React-Core'
 
   s.subspec 'Main' do |ss|
-    ss.source_files     = "ios/ReactNativeAudioStreaming.{h,m}"
+    ss.source_files     = "ios/ReactNativeAudioStreaming.{h,m}", "ios/ReactNativeAudioStreaming-Bridging-Header.h"
     ss.dependency       'RNAudioStreaming/StreamingKit'
   end
 

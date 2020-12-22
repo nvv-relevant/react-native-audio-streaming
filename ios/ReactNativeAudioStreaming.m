@@ -10,7 +10,6 @@
 #define HEADSET_PLAY @"HEADSET_PLAY"
 @import AVFoundation;
 @import MediaPlayer;
-@import MetaParser;
 
 @interface ReactNativeAudioStreaming() {
 @private
