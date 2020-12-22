@@ -1,11 +1,3 @@
-//
-//  MetaParser.swift
-//  ReactNativeAudioStreaming
-//
-//  Created by admin on 7/22/18.
-//  Copyright © 2018 Facebook. All rights reserved.
-//
-
 import UIKit
 
 @objc(MetaParser)
