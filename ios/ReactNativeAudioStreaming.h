@@ -1,6 +1,6 @@
 #import <React/RCTBridgeModule.h>
-#import "STKAudioPlayer.h"
-#import "STKAutoRecoveringHTTPDataSource.h"
+#import <STKAudioPlayer.h>
+#import <STKAutoRecoveringHTTPDataSource.h>
 
 @import MediaPlayer;
 

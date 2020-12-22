@@ -1,8 +1,9 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
+#import <STKAudioPlayer.h>
+#import <RNAudioStreaming-Swift.h>
 
 #import "ReactNativeAudioStreaming.h"
-#import "ReactNativeAudioStreaming-Swift.h"
 
 #define LPN_AUDIO_BUFFER_SEC 20 // Can't use this with shoutcast buffer meta data
 #define TICK_INTERVAL 5.0

@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
   s.source              = { :git => package['repository']['url'], :tag => "v#{s.version}" }
   s.default_subspec     = 'Main'
   s.requires_arc        = true
-  s.source_files         = 'ios/**/*.{h,m,swift}'
   s.platform            = :ios, "7.0"
   s.preserve_paths      = "**/*.js"
   s.dependency 'React-Core'
