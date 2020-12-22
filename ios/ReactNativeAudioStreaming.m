@@ -335,16 +335,20 @@ RCT_EXPORT_METHOD(goForward:(double) seconds)
 
 RCT_EXPORT_METHOD(sendFireBaseEvent:(NSString*) eventName)
 {
+   /*
    [FIRAnalytics logEventWithName:eventName
                        parameters:@{
                                     }];
+    */
 }
 
 RCT_EXPORT_METHOD(sendFireBaseEventForStation:(NSString*)stationName duration:(int)duration)
 {
+   /*
    [FIRAnalytics logEventWithName:@"time_listening" parameters:@{
    stationName: [NSNumber numberWithInt:duration]
    }];
+   */
 }
 
 RCT_EXPORT_METHOD(goBack:(double) seconds)
