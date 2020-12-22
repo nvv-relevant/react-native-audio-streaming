@@ -808,5 +808,3 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
 }
 
 @end
-@end
-
