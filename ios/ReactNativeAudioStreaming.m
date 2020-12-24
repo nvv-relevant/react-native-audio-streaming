@@ -2,8 +2,8 @@
 #import <React/RCTEventDispatcher.h>
 #import <STKAudioPlayer.h>
 
-#import "ReactNativeAudioStreaming.h"
-#import "ReactNativeAudioStreaming-Swift.h"
+#import <ReactNativeAudioStreaming/ReactNativeAudioStreaming.h>
+#import <ReactNativeAudioStreaming/ReactNativeAudioStreaming-Swift.h>
 
 #define LPN_AUDIO_BUFFER_SEC 20 // Can't use this with shoutcast buffer meta data
 #define TICK_INTERVAL 5.0

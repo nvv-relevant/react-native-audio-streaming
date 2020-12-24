@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
   s.platform            = :ios, "7.0"
   s.preserve_paths      = "**/*.js"
-  s.source_files         = 'ios/**/*.{h,m,swift}'
   s.dependency 'React-Core'
 
   s.subspec 'Main' do |ss|
