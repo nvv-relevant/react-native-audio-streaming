@@ -35,7 +35,7 @@
 
 **Merged pull requests:**
 
-- Add Cocoapods RNAudioStreaming.podspec file [\#54](https://github.com/tlenclos/react-native-audio-streaming/pull/54) ([siriusdely](https://github.com/siriusdely))
+- Add Cocoapods ReactNativeAudioStreaming.podspec file [\#54](https://github.com/tlenclos/react-native-audio-streaming/pull/54) ([siriusdely](https://github.com/siriusdely))
 
 ## [v2.3.0](https://github.com/tlenclos/react-native-audio-streaming/tree/v2.3.0) (2016-11-18)
 [Full Changelog](https://github.com/tlenclos/react-native-audio-streaming/compare/v2.2.0...v2.3.0)
